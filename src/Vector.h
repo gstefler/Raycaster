@@ -62,7 +62,7 @@ public:
 
 	// Vector length
 	float length() const {
-		return std::sqrtf(x * x + y * y);
+		return sqrtf(x * x + y * y);
 	}
 
 	float distance(const Vec& pos) const {
@@ -70,7 +70,7 @@ public:
 		float y = this->y - pos.getY();
 		x *= x;
 		y *= y;
-		return std::sqrtf(x + y);
+		return sqrtf(x + y);
 	}
 	
 	// Normalize and set magnitude
