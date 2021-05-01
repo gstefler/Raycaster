@@ -33,6 +33,7 @@ public:
 
 	void cast(const Boundary* walls, int numOfWalls) {
 		numOfIntersections = 0;
+		#pragma omp parallel for schedule(dynamic, M)
 		for (int i = 0; i < length; i++)
 		{
 			float closest = 10000.f;
@@ -44,6 +45,7 @@ public:
 				{
 					if (intersectionPoint->distance(pos) < closest)
 					{
+						#pragma omp atomic write seq_cst
 						hits[numOfIntersections] = *intersectionPoint;
 						closest = intersectionPoint->distance(pos);
 					}

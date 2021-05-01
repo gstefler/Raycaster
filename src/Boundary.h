@@ -14,7 +14,7 @@ public:
 	Vec getA() const { return a; }
 	Vec getB() const { return b; }
 
-	//Draw function
+	// Draw function
 	void draw(sf::RenderTarget* window) {
 		sf::Vertex line[] =
 		{

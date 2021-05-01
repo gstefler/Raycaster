@@ -16,8 +16,7 @@ int main()
     sf::CircleShape lightCentre(6.f);
     lightCentre.setFillColor(sf::Color(255, 255, 255, 180));
 
-    Light light({ 200, 200 }, 0.4);
-    
+    Light light({ 200, 200 }, 0.5);
 
     Boundary* wallz = new Boundary[8];
     for (int i = 0; i < 4; i++)
@@ -53,9 +52,7 @@ int main()
                     light.cast(wallz, 8);
                 }
                 if (event.key.code == sf::Keyboard::Escape)
-                {
                     window.close();
-                }
             }
             if (event.type == sf::Event::MouseMoved)
             {

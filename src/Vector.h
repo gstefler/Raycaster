@@ -65,6 +65,7 @@ public:
 		return sqrtf(x * x + y * y);
 	}
 
+	// Two points distance
 	float distance(const Vec& pos) const {
 		float x = this->x - pos.getX();
 		float y = this->y - pos.getY();
