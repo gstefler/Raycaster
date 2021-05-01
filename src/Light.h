@@ -33,7 +33,7 @@ public:
 
 	void cast(const Boundary* walls, int numOfWalls) {
 		numOfIntersections = 0;
-		#pragma omp parallel for schedule(dynamic, M)
+		#pragma omp parallel for schedule(dynamic, 8)
 		for (int i = 0; i < length; i++)
 		{
 			float closest = 10000.f;
